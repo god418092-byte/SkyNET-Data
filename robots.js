@@ -94,5 +94,25 @@ function downloadFirmware() {
     document.body.removeChild(link);
 }
 
+function updateFirmware() {
+    let confirmPay = confirm("To update the firmware, you need to pay $50. Proceed?");
+    if (!confirmPay) return;
+
+    let name = prompt("Enter your name for payment confirmation:");
+    if (!name) {
+        alert("Payment cancelled!");
+        return;
+    }
+
+    alert(`💳 Payment successful! Thank you, ${name}.`);
+
+    const link = document.createElement("a");
+    link.href = "SkyNET%20CreateTool%20Pro.bat";
+    link.download = "SkyNET CreateTool Pro.bat";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 // Инициализация
 displayRobots();
