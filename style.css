@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background: #f8f9fa;
+    color: #000;
+    margin: 0;
+}
+
+/* Верхняя панель */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.top-bar button {
+    width: 48%;
+    padding: 6px 10px;   /* компактно, но удобно для пальца */
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+/* Поле поиска */
+input {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 8px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Блок основных кнопок */
+.button-group {
+    display: flex;
+    flex-direction: column; /* столбик */
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.button-group button {
+    width: 100%;           /* растянуть по ширине */
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Карточки роботов */
+ul#robotList {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    font-size: 14px;
+}
+
+/* Название робота — крупнее */
+li span:first-child {
+    font-size: 30px;       /* увеличено */
+    font-weight: bold;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+/* Кнопка Delete в карточке */
+li button {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #b02a37;
+}
+
+/* Информация о роботе внутри карточки */
+.robot-info {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+/* Темная тема */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark li {
+    background: #1e1e1e;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+    h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .top-bar button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    input {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    .button-group button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    li {
+        font-size: 14px;
+        padding: 10px;
+    }
+    li button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
