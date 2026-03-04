@@ -1,145 +1,102 @@
+/* ===== SKYNET APP LAYOUT ===== */
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 10px;
-    background: #f8f9fa;
-    color: #000;
     margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #0b0b0b;
+    color: white;
 }
 
-/* Верхняя панель */
+
+/* главный контейнер как мобильное приложение */
+.app {
+    max-width: 480px;
+    margin: auto;
+    padding: 14px;
+}
+
+
+/* ===== ЗАГОЛОВОК ===== */
+h1 {
+    color: #ff003c;
+    text-align: center;
+    margin: 10px 0 18px;
+
+    text-shadow: 0 0 10px #ff003c;
+}
+
+
+/* ===== ВЕРХ ===== */
 .top-bar {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .top-bar button {
-    width: 48%;
-    padding: 6px 10px;   /* компактно, но удобно для пальца */
-    font-size: 14px;
-    border-radius: 6px;
+    flex: 1;
+    height: 52px;
+
+    font-size: 16px;
+
+    border-radius: 12px;
+    border: 1px solid #ff003c;
+
+    background: #111;
+    color: #ff003c;
 }
 
-/* Поле поиска */
+
+/* ===== ПОИСК ===== */
 input {
     width: 100%;
-    font-size: 14px;
-    padding: 6px 8px;
-    margin: 8px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    height: 48px;
+
+    padding: 0 12px;
+    margin-bottom: 16px;
+
+    border-radius: 12px;
+    border: 1px solid #333;
+
+    background: #111;
+    color: white;
+
+    font-size: 16px;
 }
 
-/* Блок основных кнопок */
+
+/* ===== КНОПКИ (ГЛАВНОЕ) ===== */
 .button-group {
     display: flex;
-    flex-direction: column; /* столбик */
-    gap: 8px;
-    margin: 10px 0;
-}
-
-.button-group button {
-    width: 100%;           /* растянуть по ширине */
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 8px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-.button-group button:hover {
-    background-color: #0056b3;
-}
-
-/* Карточки роботов */
-ul#robotList {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 10px;
-    background-color: #f1f1f1;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    font-size: 14px;
+    gap: 14px;
 }
 
-/* Название робота — крупнее */
-li span:first-child {
-    font-size: 30px;       /* увеличено */
+/* 🔥 большие красивые */
+.button-group button {
+    height: 78px;                 /* ключевая разница */
+    width: 100%;
+
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 6px;
-    cursor: pointer;
+
+    border-radius: 18px;
+    border: 2px solid #ff003c;
+
+    background: #0f0f0f;
+    color: #ff003c;
+
+    box-shadow: 0 0 12px #ff003c33;
 }
 
-/* Кнопка Delete в карточке */
-li button {
-    width: auto;
-    padding: 6px 10px;
-    font-size: 12px;
-    margin-top: 6px;
-    border-radius: 6px;
-    border: none;
-    background-color: #dc3545;
-    color: white;
-    cursor: pointer;
+/* неоновый эффект */
+.button-group button:hover {
+    background: #ff003c;
+    color: black;
+    box-shadow: 0 0 25px #ff003c;
 }
 
-li button:hover {
-    background-color: #b02a37;
-}
-
-/* Информация о роботе внутри карточки */
-.robot-info {
-    margin-top: 6px;
-    font-size: 12px;
-}
-
-/* Темная тема */
-.dark {
-    background: #121212;
-    color: white;
-}
-
-.dark li {
-    background: #1e1e1e;
-}
-
-/* Мобильная адаптация */
-@media (max-width: 600px) {
-    body {
-        padding: 8px;
-    }
-    h1 {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-    .top-bar button {
-        font-size: 14px;
-        padding: 6px 10px;
-    }
-    input {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-    .button-group button {
-        font-size: 14px;
-        padding: 8px;
-    }
-    li {
-        font-size: 14px;
-        padding: 10px;
-    }
-    li button {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
+.button-group button:active {
+    transform: scale(0.96);
 }

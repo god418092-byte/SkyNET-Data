@@ -17,6 +17,11 @@ function connectToRobot() {
     displayRobots();
 }
 
+
+function EnderPhone() {
+    window.location.href = "https://god418092-byte.github.io/MCKO/";
+}
+
 // Отображение всех роботов
 function displayRobots() {
     let robots = JSON.parse(localStorage.getItem(getKey())) || [];
